@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import Product from "./Product";
+import './products.css';
 
 function Products(){
     const {'*': category} = useParams();
@@ -15,12 +17,13 @@ function Products(){
 
     return(
         <div>
-            <h1>Products</h1>
-            <ul>
+            <div className="product-container">
                 {data && data.map((product) => (
-                    <li key={product.id}>{product.title}</li>
+                    <div className="product-item" key={product.id}>
+                        <Product product={product}/>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }
