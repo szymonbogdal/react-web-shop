@@ -1,4 +1,5 @@
 import { useCartContext } from "../../context/CartContext";
+import shortenText from "../../utils/shortenText";
 
 function CartItem(props){
     const {id, image, title, price, qty } = props.item;
@@ -7,7 +8,7 @@ function CartItem(props){
         <div className="cart-item">
             <img className="cart-item__img" src={image} alt={title} />
             <div className="cart-item__body">
-                <h4 className="cart-item__body-heading">{title}</h4>
+                <h4 className="cart-item__body-heading">{shortenText(title, 30)}</h4>
                 <div className="cart-item__body-action">
                     <button className="cart-item__body-action-btn" onClick={()=>decrementQty(id)} disabled={qty<=1}>-</button>
                     <p className="cart-item__body-action-qty">{qty}</p>
