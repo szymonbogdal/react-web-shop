@@ -1,4 +1,4 @@
-import { ADD_ITEM, REMOVE_ITEM, INCREMENT_QTY, DECREMENT_QTY } from "./actions";
+import { ADD_ITEM, REMOVE_ITEM, INCREMENT_QTY, DECREMENT_QTY, GET_TOTALS } from "./actions";
 
 function cartRedcuer(state, action){
     switch (action.type){
@@ -23,6 +23,15 @@ function cartRedcuer(state, action){
                 return item
             }).filter((item) => item.qty > 0);
             return { ...state, items: decItems }
+        case GET_TOTALS:
+            let {sum, qty} = state.items.reduce((total, item)=>{
+                total.sum += item.qty * item.price;
+                total.qty += item.qty;
+                return total; 
+            },
+            {sum: 0, qty: 0})
+            sum = sum.toFixed(2);
+            return {...state, sum, qty}
         default:
             return state;
     }

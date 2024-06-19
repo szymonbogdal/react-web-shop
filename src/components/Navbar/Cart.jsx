@@ -6,7 +6,7 @@ function Cart(){
     
     return(
         <div className="cart-container">
-            <h1 className="cart-container__heading">Your cart</h1>
+            <h1 className="cart-container__heading">Your cart ({state.qty})</h1>
             <hr></hr>
             <div className="cart-container__body">
                 {state.items.length>0?
@@ -18,7 +18,7 @@ function Cart(){
             <hr></hr>
             <div className="cart-container__summary">
                 <p className="cart-container_summary-total">Total: </p>
-                <p className="cart-container_summary-price">245.99$</p>
+                <p className="cart-container_summary-price">{state.sum}$</p>
             </div>
             <button className="cart-container__checkout">Checkout</button>             
         </div>
