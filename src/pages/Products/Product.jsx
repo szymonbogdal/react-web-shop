@@ -1,5 +1,6 @@
 import { useCartContext } from "../../context/CartContext";
 import shortenText from "../../utils/shortenText";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Product(props){
     const {id, image, title, price, category, rating} = props.product;
@@ -11,7 +12,7 @@ function Product(props){
             <p className="product-item__title">{shortenText(title, 40)}</p>
             <div className="product-item__info">
                 <p className="product-item__info-price">{price}$</p>
-                <p className="product-item__info-rating">{rating.rate}<span className="product-item__info-star">&#9733;</span></p>
+                <p className="product-item__info-rating">{rating.rate}<FontAwesomeIcon icon="fa-solid fa-star" className="product-item__info-star"/></p>
             </div>
 
             {state.items.find(item=>item.id === id)?

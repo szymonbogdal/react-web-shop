@@ -110,6 +110,7 @@ nav li a:hover{
     aspect-ratio: 1/1;
     background: none;
     border: 0.1rem solid #adb5bd;
+    padding: 0;
 }
 .cart-item__body-action-btn:hover:enabled{
     background-color: #dee2e6;
@@ -137,5 +138,5 @@ nav li a:hover{
     cursor: pointer;
 }
 .cart-item__remove:hover{
-    font-weight: bolder;
+    font-size: large;
 }

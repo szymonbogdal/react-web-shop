@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Cart from "./Cart";
 import './navbar.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar(){
     const [showCart, setShowCart] = useState(false);
@@ -25,7 +26,7 @@ function Navbar(){
                         <Link to="/electronics">Electronics</Link>
                     </li>
                     <li>
-                        <button onClick={()=>setShowCart(!showCart)}>Cart</button>
+                        <button onClick={()=>setShowCart(!showCart)}><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></button>
                     </li>
                 </ul>
             </nav>
