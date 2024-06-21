@@ -8,25 +8,25 @@ function Navbar(){
     const [showCart, setShowCart] = useState(false);
     return(
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">All products</Link>
+            <nav className="navbar">
+                <ul className="navbar__list">
+                    <li className="navbar__item">
+                        <Link to="/" className="navbar__item-link">All products</Link>
                     </li>
-                    <li>
-                        <Link to="/men's%20clothing">Men's clothing</Link>
+                    <li className="navbar__item">
+                        <Link to="/men's%20clothing" className="navbar__item-link">Men's clothing</Link>
                     </li>
-                    <li>
-                        <Link to="/women's%20clothing">Women's clothing</Link>
+                    <li className="navbar__item">
+                        <Link to="/women's%20clothing" className="navbar__item-link">Women's clothing</Link>
                     </li>
-                    <li>
-                        <Link to="/jewelery">Jewelery</Link>
+                    <li className="navbar__item">
+                        <Link to="/jewelery" className="navbar__item-link">Jewelery</Link>
                     </li>
-                    <li>
-                        <Link to="/electronics">Electronics</Link>
+                    <li className="navbar__item">
+                        <Link to="/electronics" className="navbar__item-link">Electronics</Link>
                     </li>
-                    <li>
-                        <button onClick={()=>setShowCart(!showCart)}><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></button>
+                    <li className="navbar__item">
+                        <button className="navbar__item-btn" onClick={()=>setShowCart(!showCart)}><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></button>
                     </li>
                 </ul>
             </nav>
