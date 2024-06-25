@@ -4,6 +4,7 @@ import { CartProvider } from "./context/CartContext";
 import './app.css'
 
 import Products from "./pages/Products";
+import Product from "./pages/Product";
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/*" element={<Products/>}/>
+          <Route path="/product/:id" element={<Product/>}/>
         </Routes>
       </Router>
     </CartProvider>
