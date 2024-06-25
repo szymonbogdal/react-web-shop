@@ -14,16 +14,16 @@ function Navbar(){
                         <Link to="/" className="navbar__item-link">All products</Link>
                     </li>
                     <li className="navbar__item">
-                        <Link to="/men's%20clothing" className="navbar__item-link">Men's clothing</Link>
+                        <Link to="/category/men's%20clothing" className="navbar__item-link">Men's clothing</Link>
                     </li>
                     <li className="navbar__item">
-                        <Link to="/women's%20clothing" className="navbar__item-link">Women's clothing</Link>
+                        <Link to="/category/women's%20clothing" className="navbar__item-link">Women's clothing</Link>
                     </li>
                     <li className="navbar__item">
-                        <Link to="/jewelery" className="navbar__item-link">Jewelery</Link>
+                        <Link to="/category/jewelery" className="navbar__item-link">Jewelery</Link>
                     </li>
                     <li className="navbar__item">
-                        <Link to="/electronics" className="navbar__item-link">Electronics</Link>
+                        <Link to="/category/electronics" className="navbar__item-link">Electronics</Link>
                     </li>
                     <li className="navbar__item">
                         <button className="navbar__item-btn" onClick={()=>setShowCart(!showCart)}><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></button>
