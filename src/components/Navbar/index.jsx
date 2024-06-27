@@ -3,9 +3,11 @@ import { useState } from "react";
 import Cart from "./Cart";
 import './navbar.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useCartContext } from "../../context/CartContext"
 
 function Navbar(){
     const [showCart, setShowCart] = useState(false);
+    const {state} = useCartContext();
     return(
         <>
             <nav className="navbar">
@@ -26,7 +28,10 @@ function Navbar(){
                         <Link to="/category/electronics" className="navbar__item-link">Electronics</Link>
                     </li>
                     <li className="navbar__item">
-                        <button className="navbar__item-btn" onClick={()=>setShowCart(!showCart)}><FontAwesomeIcon icon="fa-solid fa-cart-shopping" /></button>
+                        <button className="navbar__item-btn" onClick={()=>setShowCart(!showCart)}>
+                            <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+                            <span className="navbar__item-btn-count">{state.qty > 9?"9+":state.qty}</span>
+                        </button>
                     </li>
                 </ul>
             </nav>

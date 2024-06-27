@@ -31,11 +31,27 @@
     background: none;
     border: none;
     color: #353c42;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     cursor: pointer;
+    position: relative;
 }
 .navbar__item-btn:hover{
     color: #095fbb;
+}
+.navbar__item-btn-count{
+    position: absolute;
+    top: -0.55rem;
+    right: -0.25rem;
+    color: #f8f9fa;
+    background: #0d7ff8;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.4rem;
+    height: 1rem;
+    width: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cart-container{
     border: 0.15rem solid #212529;
