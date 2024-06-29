@@ -23,7 +23,7 @@ function ProductDetails(props){
                 :
                 <button className="product__body-btn product__body-btn--add" onClick={()=>addItem(props.product)}>Add to cart</button>
                 }
-                <Link to={"/checkout"} onClick={()=>addItem(props.product)} className="product__body-buy">Buy now</Link>
+                <Link to={"/checkout"} onClick={()=> !state.items.find(item=>item.id === id) && addItem(props.product)} className="product__body-buy">Buy now</Link>
             </div>
         </div>
     )
