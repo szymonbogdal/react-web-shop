@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 function ProductDetails(props){
     const {id, image, title, price, category, rating, description} = props.product;
@@ -22,7 +23,7 @@ function ProductDetails(props){
                 :
                 <button className="product__body-btn product__body-btn--add" onClick={()=>addItem(props.product)}>Add to cart</button>
                 }
-                <button className="product__body-btn product__body-btn--buy">Buy now</button>
+                <Link to={"/checkout"} onClick={()=>addItem(props.product)} className="product__body-buy">Buy now</Link>
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import { useCartContext } from "../../context/CartContext"
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
 
 function Cart(){
     const {state} = useCartContext();
@@ -20,7 +21,7 @@ function Cart(){
                 <p className="cart-container_summary-total">Total: </p>
                 <p className="cart-container_summary-price">{state.sum}$</p>
             </div>
-            <button className="cart-container__checkout">Checkout</button>             
+            <Link to={"/checkout"} className="product-item__link"><button className="cart-container__checkout">Checkout</button></Link>            
         </div>
     )
 }
