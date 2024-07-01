@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Cart from "./Cart";
 import './navbar.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +8,12 @@ import { useCartContext } from "../../context/CartContext"
 function Navbar(){
     const [showCart, setShowCart] = useState(false);
     const {state} = useCartContext();
+    const location = useLocation();
+
+    useEffect(()=>{
+        if(showCart){ setShowCart(false) };
+    }, [location])
+
     return(
         <>
             <nav className="navbar">
