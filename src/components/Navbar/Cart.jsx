@@ -21,7 +21,7 @@ function Cart(){
                 <p className="cart-container_summary-total">Total: </p>
                 <p className="cart-container_summary-price">{state.sum}$</p>
             </div>
-            <Link to={"/checkout"} className="product-item__link"><button className="cart-container__checkout">Checkout</button></Link>            
+            <Link to={"/checkout"} className="cart-container__checkout">Checkout</Link>            
         </div>
     )
 }
