@@ -9,7 +9,7 @@ function Product(props){
     const {addItem, state} = useCartContext();
     return(
         <div className="product-item">
-             <Link to={`product/${id}`} className="product-item__link">
+             <Link to={`/product/${id}`} className="product-item__link">
                 <img className="product-item__img" src={image} alt={title} />
                 <p className="product-item__category">{category}</p>
                 <p className="product-item__title">{shortenText(title, 40)}</p>

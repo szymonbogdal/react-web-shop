@@ -19,19 +19,19 @@ function Navbar(){
             <nav className="navbar">
                 <ul className="navbar__list">
                     <li className="navbar__item">
-                        <Link to="/" className="navbar__item-link">All products</Link>
+                        <Link to="/products" className="navbar__item-link">All products</Link>
                     </li>
                     <li className="navbar__item">
-                        <Link to="/category/men's%20clothing" className="navbar__item-link">Men's clothing</Link>
+                        <Link to="/products/category/men's%20clothing" className="navbar__item-link">Men's clothing</Link>
                     </li>
                     <li className="navbar__item">
-                        <Link to="/category/women's%20clothing" className="navbar__item-link">Women's clothing</Link>
+                        <Link to="/products/category/women's%20clothing" className="navbar__item-link">Women's clothing</Link>
                     </li>
                     <li className="navbar__item">
-                        <Link to="/category/jewelery" className="navbar__item-link">Jewelery</Link>
+                        <Link to="/products/category/jewelery" className="navbar__item-link">Jewelery</Link>
                     </li>
                     <li className="navbar__item">
-                        <Link to="/category/electronics" className="navbar__item-link">Electronics</Link>
+                        <Link to="/products/category/electronics" className="navbar__item-link">Electronics</Link>
                     </li>
                     <li className="navbar__item">
                         <button className="navbar__item-btn" onClick={()=>setShowCart(!showCart)}>

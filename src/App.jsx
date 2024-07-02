@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import { CartProvider } from "./context/CartContext";
 import './app.css'
 
+import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
@@ -14,7 +15,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/*" element={<Products/>}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/products/*" element={<Products/>}/>
           <Route path="/product/:id" element={<Product/>}/>
           <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
