@@ -19,6 +19,9 @@ function Navbar(){
             <nav className="navbar">
                 <ul className="navbar__list">
                     <li className="navbar__item">
+                        <Link to="/" className="navbar__item-link navbar__item-link--home">Home</Link>
+                    </li>
+                    <li className="navbar__item">
                         <Link to="/products" className="navbar__item-link">All products</Link>
                     </li>
                     <li className="navbar__item">

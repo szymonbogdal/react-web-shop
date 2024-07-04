@@ -20,11 +20,16 @@
 .navbar__item:last-of-type{
     margin-left: auto;
 } 
-.navbar__item a {
+.navbar__item-link {
     color: #212529;
     text-decoration: none;
 }
-.navbar__item a:hover{
+.navbar__item-link--home {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+.navbar__item-link:hover{
     color: #095fbb;
 }
 .navbar__item-btn{
