@@ -3,6 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import HomeItem from "./HomeItem";
 import { Link } from "react-router-dom";
 import Loader from "../../components/Loader";
+import ErrorMessage from "../../components/ErrorMessage";
 
 function Home(){
     const {data, loading, error} = useFetch("?limit=6");
@@ -12,7 +13,7 @@ function Home(){
     }
 
     if(error){
-        return <h1>Error</h1>
+        return <ErrorMessage/>
     }
 
     return(

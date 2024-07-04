@@ -1,0 +1,22 @@
+.error-container{
+    width: 100%;
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error__exclamation{
+    aspect-ratio: 1/1;
+    font-size: 12rem;
+    color: #095fbb;
+    margin-right: 5rem;
+}
+.error__body-header{
+    font-weight: bold;
+    font-size: 5rem;
+    margin: 0;
+}
+.error__body-message{
+    font-size: 2rem;
+    margin: 0;
+}

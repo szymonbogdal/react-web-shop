@@ -3,6 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import ProductDetails from "./ProductDetails";
 import './product.css'
 import Loader from "../../components/Loader";
+import ErrorMessage from "../../components/ErrorMessage";
 
 function Product(){
     const {id} = useParams();
@@ -13,7 +14,7 @@ function Product(){
     }
     
     if(error){
-        return <h1>Error</h1>
+        return <ErrorMessage/>
     }
 
     return <ProductDetails product={data} />

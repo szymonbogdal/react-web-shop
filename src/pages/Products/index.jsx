@@ -3,6 +3,7 @@ import useFetch from "../../hooks/useFetch";
 import Product from "./Product";
 import './products.css';
 import Loader from "../../components/Loader";
+import ErrorMessage from "../../components/ErrorMessage";
 
 function Products(){
     const {'*': category} = useParams();
@@ -13,7 +14,7 @@ function Products(){
     }
     
     if(error){
-        return <h1>Error</h1>
+        return <ErrorMessage/>
     }
 
     return(
