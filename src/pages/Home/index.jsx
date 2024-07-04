@@ -2,12 +2,13 @@ import "./home.css"
 import useFetch from "../../hooks/useFetch";
 import HomeItem from "./HomeItem";
 import { Link } from "react-router-dom";
+import Loader from "../../components/Loader";
 
 function Home(){
     const {data, loading, error} = useFetch("?limit=6");
 
     if(loading){
-        return <h1>Loading</h1>
+        return <Loader/>
     }
 
     if(error){

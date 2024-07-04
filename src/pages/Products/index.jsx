@@ -2,13 +2,14 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Product from "./Product";
 import './products.css';
+import Loader from "../../components/Loader";
 
 function Products(){
     const {'*': category} = useParams();
     const {loading, error, data} = useFetch(category);
     
     if(loading){
-        return <h1>Loading</h1>
+        return <Loader/>
     }
     
     if(error){

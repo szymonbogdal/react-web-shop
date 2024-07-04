@@ -1,0 +1,23 @@
+.loader-container{
+    width: 100%;
+    height: calc(100vh - 4rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader{
+    aspect-ratio: 1/1;
+    width: 3rem;
+    border: 0.5rem solid #095fbb;
+    border-bottom-color: #f8f9fa;
+    border-radius: 50%;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
