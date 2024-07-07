@@ -6,7 +6,7 @@ import Loader from "../../components/Loader";
 import ErrorMessage from "../../components/ErrorMessage";
 
 function Home(){
-    const {data, loading, error} = useFetch("?limit=6");
+    const {data, loading, error} = useFetch("?limit=9");
 
     if(loading){
         return <Loader/>
