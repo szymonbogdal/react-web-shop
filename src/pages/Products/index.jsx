@@ -4,6 +4,7 @@ import Product from "./Product";
 import './products.css';
 import Loader from "../../components/Loader";
 import ErrorMessage from "../../components/ErrorMessage";
+import ProductCategories from "./ProductCategories";
 
 function Products(){
     const {'*': category} = useParams();
@@ -19,6 +20,7 @@ function Products(){
 
     return(
         <div>
+            <ProductCategories/>
             <div className="product-container">
                 {data && data.map((product) => (
                         <Product product={product} key={product.id}/>
