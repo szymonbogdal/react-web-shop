@@ -21,19 +21,22 @@ function Navbar(){
                     <li className="navbar__item">
                         <Link to="/" className="navbar__item-link navbar__item-link--home">Home</Link>
                     </li>
-                    <li className="navbar__item">
+                    <li className="navbar__item navbar__item--mobile">
+                        <Link to="/products" className="navbar__item-link">Products</Link>
+                    </li>
+                    <li className="navbar__item navbar__item--desktop">
                         <Link to="/products" className="navbar__item-link">All products</Link>
                     </li>
-                    <li className="navbar__item">
+                    <li className="navbar__item navbar__item--desktop">
                         <Link to="/products/category/men's%20clothing" className="navbar__item-link">Men's clothing</Link>
                     </li>
-                    <li className="navbar__item">
+                    <li className="navbar__item navbar__item--desktop">
                         <Link to="/products/category/women's%20clothing" className="navbar__item-link">Women's clothing</Link>
                     </li>
-                    <li className="navbar__item">
+                    <li className="navbar__item navbar__item--desktop">
                         <Link to="/products/category/jewelery" className="navbar__item-link">Jewelery</Link>
                     </li>
-                    <li className="navbar__item">
+                    <li className="navbar__item navbar__item--desktop">
                         <Link to="/products/category/electronics" className="navbar__item-link">Electronics</Link>
                     </li>
                     <li className="navbar__item">

@@ -19,6 +19,9 @@
 }
 .navbar__item:last-of-type{
     margin-left: auto;
+}
+.navbar__item--mobile{
+    display: none;
 } 
 .navbar__item-link {
     color: #212529;
@@ -123,7 +126,7 @@
     grid-template-rows: 1fr;
     grid-column-gap: 1rem;
     align-items: center;
-    justify-items: center;
+    justify-items: left;
     margin-bottom: 1rem;
 }
 .cart-item__img{
@@ -170,7 +173,66 @@
     background: none;
     border: none;
     cursor: pointer;
+    justify-self: right;
 }
 .cart-item__remove:hover{
     font-size: large;
+}
+@media screen and (max-width: 1280px) {
+    .navbar__item{
+        margin: 0 1.5rem;
+    }
+    .navbar__item-link--home{
+        margin-right: 1rem;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .navbar__list{
+        padding: 0;
+    }
+    .navbar__item{
+        margin: 0 1rem;
+        font-size: 1rem;
+    }
+    .navbar__item-link--home{
+        margin: 0rem;
+        font-size: 1.15rem;
+    }
+    .navbar__item-btn{
+        font-size: 1.5rem;
+    }
+    .navbar__item-btn-count{
+        height: 0.85rem;
+        width: 0.35rem;
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar__item--desktop{
+        display: none;
+    }
+    .navbar__item--mobile{
+        display: block;
+    }
+}
+@media screen and (max-width: 480px) {
+    .cart-container{
+        width: 90%;
+        right: 0;
+        left: 0;
+        margin: 0.5rem auto;
+    }
+    .cart-item{
+        grid-column-gap: 0.5rem;
+        /*
+        calculating grid columns, by dividing total area on 4 columns, including column-gap,
+        if there are 4 columns, there is actually 3 gaps in total,
+        that's why I substract 0.75 gap value, not the full one
+        */
+        grid-template-columns: calc(22.5% - 0.375rem) calc(50% - 0.375rem) calc(15% - 0.375rem) calc(12.5% - 0.375rem);
+        font-size: 1rem;
+    }
+    .cart-item__remove{
+        display: none;
+    }
 }
