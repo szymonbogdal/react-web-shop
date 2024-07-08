@@ -66,6 +66,9 @@
 .product__body-btn--added{
     background-color: #285430;
 }
+.product__body-btn--clicked{
+    animation: btnClick 300ms ease-out;
+}
 .product__body-buy{
     color: #095fbb;
     border: solid 0.15rem #095fbb;

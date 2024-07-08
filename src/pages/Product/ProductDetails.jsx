@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import AddToCartBtn from "../../components/AddToCartBtn";
 
 function ProductDetails(props){
     const {id, image, title, price, category, rating, description} = props.product;
@@ -17,12 +18,7 @@ function ProductDetails(props){
                 <p className="product__body-description-header">Description</p>
                 <hr></hr>
                 <p className="product__body-description">{description}</p>
-                
-                {state.items.find(item=>item.id === id)?
-                <button className="product__body-btn product__body-btn--added" disabled>Item in cart</button>
-                :
-                <button className="product__body-btn product__body-btn--add" onClick={()=>addItem(props.product)}>Add to cart</button>
-                }
+                <AddToCartBtn product={props.product} className={"product__body-btn"}/>
                 <Link to={"/checkout"} onClick={()=> !state.items.find(item=>item.id === id) && addItem(props.product)} className="product__body-buy">Buy now</Link>
             </div>
         </div>
