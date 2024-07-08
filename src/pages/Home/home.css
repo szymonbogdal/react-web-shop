@@ -41,6 +41,10 @@
     cursor: pointer;
     border: solid 0.15rem #f8f8f8;
     font-weight: bold;
+    transition: font-size 200ms ease-out;
+}
+.home__body-link:hover{
+    font-size: large;
 }
 .home__body-link--category{
     background-color: #f8f8f8;
@@ -49,13 +53,7 @@
 .home__body-link--products{
     color: #f8f8f8;
 }
-.home__body-link--category:hover{
-    background-color: #ced4da;
-    border-color: #ced4da;
-}
-.home__body-link--products:hover{
-    background-color: #0a3e75;
-}
+
 .home__items-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
