@@ -2,7 +2,7 @@
     position: sticky;
     position: -webkit-sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     font-size: 1.15rem;
 }
 .navbar__list{
@@ -71,6 +71,7 @@
     background-color: #fff;
     padding: 1rem;
     z-index: 1;
+    animation: slideTop 0.3s ease-out;
 }
 .cart-container__heading{
     margin: 0;

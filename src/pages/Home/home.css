@@ -4,6 +4,7 @@
     clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
     height: calc(100vh - 4rem);
     width: 50%;
+    animation: slideLeft 0.3s ease-out;
 }
 .home__text-body{
     max-width: 70%;
@@ -71,6 +72,8 @@
     background-color: #fff;
     padding: 0.2rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    animation: fadeIn 300ms ease-out;
+    z-index: -1;
 }
 .home-item__image{
     aspect-ratio: 1/1;
@@ -102,6 +105,7 @@
         height: fit-content;
         width: 100%;
         padding: 1rem 0;
+        animation: slideTop 0.3s ease-out;
     }
     .home__text-body{
         max-width: 90%;
@@ -145,3 +149,13 @@
         padding: 0.5rem 0;
     }
 }
+  @keyframes slideLeft {
+    from {
+      transform: translateX(-20%);
+      opacity: 0.8;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  } 

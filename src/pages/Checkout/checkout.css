@@ -1,6 +1,7 @@
 .checkout{
     margin: 3rem auto;
     width: 65%;
+    animation: fadeIn 300ms ease-in-out;
 }
 .checkout__header{
     display: flex;

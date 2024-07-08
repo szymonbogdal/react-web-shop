@@ -5,6 +5,7 @@
     padding: 2rem;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
     width: 65%;
+    animation: fadeIn 300ms ease-in-out;
 }
 .product__img{
     aspect-ratio: 1/1;
