@@ -2,6 +2,7 @@ import { useCartContext } from "../../context/CartContext";
 import shortenText from "../../utils/shortenText";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import AddToCartBtn from "../../components/AddToCartBtn";
 
 function Product(props){
     
@@ -19,11 +20,7 @@ function Product(props){
                 <p className="product-item__info-rating">{rating.rate}<FontAwesomeIcon icon="fa-solid fa-star" className="product-item__info-star"/></p>
             </div>
 
-            {state.items.find(item=>item.id === id)?
-            <button className="product-item__info-added" disabled>Item in cart</button>
-            :
-            <button className="product-item__info-add" onClick={()=>addItem(props.product)}>Add to cart</button>
-            }
+            <AddToCartBtn product={props.product} className={"product-item__btn"}/>
         </div>
     )
 
