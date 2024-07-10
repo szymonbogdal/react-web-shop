@@ -3,3 +3,4 @@ export const REMOVE_ITEM = 'REMOVE_ITEM';
 export const INCREMENT_QTY = 'INCREMENT_QTY';
 export const DECREMENT_QTY = 'DECREMENT_QTY';
 export const GET_TOTALS = 'GET_TOTALS';
+export const SET_CART_FROM_STORAGE = 'SET_CART_FROM_STORAGE';

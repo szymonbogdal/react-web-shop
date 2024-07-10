@@ -1,6 +1,6 @@
-import { ADD_ITEM, REMOVE_ITEM, INCREMENT_QTY, DECREMENT_QTY, GET_TOTALS } from "./actions";
+import { ADD_ITEM, REMOVE_ITEM, INCREMENT_QTY, DECREMENT_QTY, GET_TOTALS, SET_CART_FROM_STORAGE } from "./actions";
 
-function cartRedcuer(state, action){
+function cartReducer(state, action){
     switch (action.type){
         case ADD_ITEM:
             const newItem = {...action.payload.item, qty:1};
@@ -32,9 +32,11 @@ function cartRedcuer(state, action){
             {sum: 0, qty: 0})
             sum = sum.toFixed(2);
             return {...state, sum, qty}
+        case SET_CART_FROM_STORAGE:
+            return action.payload;
         default:
             return state;
     }
 }
 
-export default cartRedcuer;
+export default cartReducer;
