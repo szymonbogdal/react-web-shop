@@ -11,7 +11,7 @@ Live demo - [React Shopp App](https://stupendous-bublanina-0b7510.netlify.app)
  - Font Awesome
  - Local Storage
 
-## Scrennshot
+## Screenshot
 ![App Screenshot](./public/home-page-screenshot.png)
 
 
