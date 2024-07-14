@@ -24,9 +24,9 @@ Live demo - [React Shopp App](https://stupendous-bublanina-0b7510.netlify.app)
  - **Fake Store API** by MohammadReza Keikavousi
     - **Source**: [Fake Store API](https://fakestoreapi.com/)
     - **License**: MIT License
- - **Font Awesome** by Dave Gandy 
+ - **Font Awesome** by Dave Gandy
     - **Source**: [Font Awesome](http://fontawesome.io)
     - **License**: MIT License
  - **Google Material Design Icons** for app logo
-    - **Soure**: [Material Design Icons](https://material.io/resources/icons/)
+    - **Source**: [Material Design Icons](https://material.io/resources/icons/)
     - **License**: Apache License 2.0
